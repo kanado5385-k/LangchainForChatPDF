@@ -52,7 +52,7 @@ def main():
                 chunks = text_splitter.split_documents(pages)  
                 #st.write(chunks)  #청크 확인위한 코드 streamlit run app.py
 
-                # 여기서부터는 추출된 텍스트를 사용하여 다음 단계를 수행할 수 있습니다.
+                # 여기서부터는 추출된 텍스트를 사용하여 다음 단계를 수행
                 embeddings_model = OpenAIEmbeddings(openai_api_key="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")
                 db = FAISS.from_documents(chunks, embeddings_model)
 
